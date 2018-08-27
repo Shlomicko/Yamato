@@ -16,8 +16,8 @@
 title: Yamato Space Battle Ship
 email: shlomicko@gmail.com
 description: ""
-baseurl: "/Yamato" # the subpath of your site, e.g. /blog
-
+baseurl: "/Yamato" 
+url: "https://shlomicko.github.io"
 
 # Build settings
 markdown: kramdown

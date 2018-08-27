@@ -24,7 +24,7 @@ title: "About"
         <li><span>{{ currentSpec[0] }}</span><br>{{ currentSpec[1] }}</li>
     {% endfor %}
 </ul>
-<img class="element-margin-bottom image-scale-fit" src="{{ site.baseurl }}{{ site.data.yamato_history_images[0].src }}" 
+<img class="element-margin-bottom image-scale-fit" src="{{ site.url }}{{ site.baseurl }}{{ site.data.yamato_history_images[0].src }}" 
 alt="{{ site.data.yamato_history_images[0].title }}" title="{{ site.data.yamato_history_images[0].title }}">
 
 <p class="element-margin-bottom">
@@ -35,9 +35,10 @@ alt="{{ site.data.yamato_history_images[0].title }}" title="{{ site.data.yamato_
 
 <div id="ship_gallery" class="yamato-gallery page-padding element-margin-bottom">
     {% for image in site.data.yamato_tv_images %}
+        {% assign completeSrc = {{ site.url }}{{ site.baseurl }}image.src %}
         <div>
-            <a href="{{ image.src }}" target="_blank">
-                <img src="{{ image.src }}" alt="{{image.title}}" title="{{image.title}}" class="image-thumbnail" />
+            <a href="{{ completeSrc }}" target="_blank">
+                <img src="{{ completeSrc }}" alt="{{image.title}}" title="{{image.title}}" class="image-thumbnail" />
             </a>
         </div>
     {% endfor %}
