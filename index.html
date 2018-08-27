@@ -35,7 +35,7 @@ alt="{{ site.data.yamato_history_images[0].title }}" title="{{ site.data.yamato_
 
 <div id="ship_gallery" class="yamato-gallery page-padding element-margin-bottom">
     {% for image in site.data.yamato_tv_images %}
-        {% assign completeSrc = {{ site.url }}{{ site.baseurl }}image.src %}
+        {% assign completeSrc = site.url | append: site.baseurl | append: image.src %}
         <div>
             <a href="{{ completeSrc }}" target="_blank">
                 <img src="{{ completeSrc }}" alt="{{image.title}}" title="{{image.title}}" class="image-thumbnail" />
