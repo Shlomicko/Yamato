@@ -1,0 +1,38 @@
+---
+layout: page
+title: "About"
+---
+<div id="intro" class="page-padding element-margin-bottom">
+    <h1 class="element-margin-bottom">Japanese battleship Yamato</h1>
+    <h2 class="element-margin-bottom">Yamato was the lead ship of her class of battleships built for the Imperial Japanese Navy shortly before World War II</h2>
+    <p>
+        Yamato (大和) was the lead ship of her class of battleships built for the Imperial Japanese Navy (IJN) shortly before World War II.
+        She and her sister ship, Musashi, were the heaviest and most powerfully armed battleships ever constructed, displacing 72,800 tonnes at full load and armed with nine 46 cm (18.1 in) Type 94 main guns, which were the largest guns ever mounted on a warship.
+    </p>
+    <p>
+        Named after the ancient Japanese Yamato Province, Yamato was designed to counter the numerically superior battleship fleet of the United States, 
+        Japan's main rival in the Pacific. She was laid down in 1937 and formally commissioned a week after the Pearl Harbor attack in late 1941. Throughout 1942, she served as the flagship of the Combined Fleet, and in June 1942 Admiral Isoroku Yamamoto directed the fleet from her bridge during the Battle of Midway, 
+        a disastrous defeat for Japan. Musashi took over as the Combined Fleet flagship in early 1943, and Yamato spent the rest of the year, and much of 1944, moving between the major Japanese naval bases of Truk and Kure in response to American threats. Although present at the Battle of the Philippine Sea in June 1944, she played no part in the battle.<br>
+    </p>
+</div>
+
+{% assign Specs = site.data.yamato_specs %}
+
+<ul class="yamato-specs element-margin-bottom">
+    {% for spec in Specs.Specs %}
+        {% assign currentSpec = spec  %}
+        <li><span>{{ currentSpec[0] }}</span><br>{{ currentSpec[1] }}</li>
+    {% endfor %}
+</ul>
+<img class="element-margin-bottom image-scale-fit" src="{{ site.data.yamato_history_images[0].src }}" 
+alt="{{ site.data.yamato_history_images[0].title }}" title="{{ site.data.yamato_history_images[0].title }}">
+
+<div id="ship_gallery" class="yamato-gallery page-padding element-margin-bottom">
+    {% for image in site.data.yamato_tv_images %}
+        <div>
+            <a href="{{ image.src }}" target="_blank">
+                <img src="{{ image.src }}" alt="{{image.title}}" title="{{image.title}}" class="image-thumbnail" />
+            </a>
+        </div>
+    {% endfor %}
+</div>
