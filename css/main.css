@@ -2,12 +2,10 @@
 *{
 	box-sizing: border-box;
 }
-h1,h2,p{
-	text-align: center;
-}
+
 header{
 	background: white;
-	box-shadow: 0 10px 30px 9px rgba(200, 200, 200, .4);
+	box-shadow: 0 1px 40px 9px rgba(200, 200, 200, .4);
 }
 html, body {
   margin: 0;
@@ -165,15 +163,24 @@ ul.yamato-specs li>span{
 #intro h1{
 	font-weight: 300;
 	font-size: 32px;
+	margin-top: 80px;
 }
- p{
-	font-size: 18px;
+#intro{
+	text-align: center;
+}
+p{
+	font-size: 22px;
 	margin-left:100px;
 	margin-right:100px;
+	font-weight:100;
 }
 #intro h2{
 	margin-left: 200px;
 	margin-right: 200px;
+	margin-top: 70px;
+	padding-right:  30px;
+	padding-left:  30px;
 	font-size: 26px;
 	font-weight: 500;
+	line-height: 36px;
 }
